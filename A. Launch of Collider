@@ -1,0 +1,36 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int n,mn=-1;
+    string s;
+    cin>>n>>s;
+    vector<int>v (n);
+    for(int j=0;j<n;j++)
+    {
+        cin>>v[j];
+    }
+    for(int i=0; i<n;i++)
+    {
+        if(s[i]=='R'&&s[i+1]=='L')
+        {
+            if(mn == -1){
+                 mn = v[i+1] - v[i];
+             }
+             else {
+                 mn = min(mn, v[i+1] - v[i]);
+            }
+
+        }
+    }
+if(mn!=-1)
+{
+    cout<<mn/2;
+    return 0;
+}
+cout<<-1;
+
+    return 0;
+}
