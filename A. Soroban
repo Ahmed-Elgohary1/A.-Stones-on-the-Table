@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+string num,s;
+int n;
+getline(cin,num);
+n=num.size();
+while(n--)
+{
+    s="O-|-OOOO";
+ if(num[n]>='5')
+ {
+     swap(s[0],s[1]);
+     num[n]-=(5);
+ }
+    swap(s[3],s[num[n]-48+3]);
+
+    cout<<s<<endl;
+}
+
+    return 0;
+}
