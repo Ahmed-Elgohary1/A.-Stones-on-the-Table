@@ -1,0 +1,36 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+ 
+	int n;
+	cin >> n;
+	int arr[n];
+	int array[n];
+ int sum=0;
+	for(int i = 0; i < n; i++)
+		cin >> arr[i];
+ 
+	for(int i = 0; i < n; i++) {
+		array[i] = arr[i]/2;
+		sum += array[i];
+	}
+ 
+	for(int i =0; i < n && sum != 0; i++) 
+	{
+		if(sum > 0 && arr[i]%2 != 0 && arr[i] < 0){
+			array[i] -= 1;
+			sum --;
+		}
+		else if(sum < 0 && arr[i]%2 != 0 && arr[i] > 0) {
+			array[i] += 1;
+			sum ++;
+		}
+	}
+ 
+	for(int i = 0; i < n; i++)
+		cout << array[i] << endl;
+ 
+	return 0;
+}
