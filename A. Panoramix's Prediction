@@ -1,0 +1,36 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+int n,m,o=0;
+cin>>n>>m;
+for(int i=2;i<m;i++)
+{
+    if(m%i==0)
+    {
+        cout<<"NO";
+        return 0;
+    }
+}
+for(int j=n+1;j<m;j++)
+{
+    for(int t=2;t<j;t++)
+{
+    if(j%t==0)
+    {
+        o++;
+    }
+}
+if(o==0)
+{
+    cout<<"NO";
+    return 0;
+}
+else{o=0;}
+
+}
+cout<<"YES";
+    return 0;
+}
