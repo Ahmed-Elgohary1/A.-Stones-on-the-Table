@@ -1,0 +1,15 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long int mn,mx,n,m,i,jem=0;
+	cin>>n>>m;
+	mn=min(n,m);
+	mx=max(n,m);
+	for(i=1;i<=mn;i++)
+    {
+	jem+=(mx+(i%5))/5;
+    }
+	cout<<jem;
+
+}
