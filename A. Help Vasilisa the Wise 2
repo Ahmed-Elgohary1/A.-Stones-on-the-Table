@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+int r1,r2,c1,c2,d1,d2,a,b,x,y;
+cin>>r1>>r2>>c1>>c2>>d1>>d2;
+a=(d1-c2+r1)/2;
+x=c1-a;
+b=r1-a;
+y=r2-x;
+if(a==0||b==0||x==0||y==0||(a==b||b==x||x==y||a==y||a==x||a==y||b==y)||a>9||b>9||x>9||y>9||!((r1+r2==c1+c2)&&(r1+r2==d1+d2)&&(c1+c2==d1+d2)))
+{
+    cout<<-1;
+    return 0;
+}
+cout<<a<<" "<<b<<endl<<x<<" "<<y;
+//cout<<r1<<r2<<c1<<c2<<d1<<d2;
+
+    return 0;
+}
