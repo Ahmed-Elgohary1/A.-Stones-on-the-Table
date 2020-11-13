@@ -1,0 +1,71 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+string s;
+int n,k,l,o=0,count=0,x=0,x1=0,x2=0,x3=0,x4=0,x5=0,x6=0,x7=0,x8=0,x9=0;
+cin>>n>>k;
+for(int i=0;i<n;i++)
+{
+cin>>s;
+l=s.size();
+for(int j=0;j<l;j++)
+{
+
+        if(s[j]==48&&x==0&&s[j]<=k+48)
+        {
+            x++;
+            continue;
+        }
+        if(s[j]==49&&x1==0&&s[j]<=k+48)
+        {
+            x1++;
+            continue;
+        }if(s[j]==50&&x2==0&&s[j]<=k+48)
+        {
+            x2++;
+            continue;
+        }if(s[j]==51&&x3==0&&s[j]<=k+48)
+        {
+            x3++;
+            continue;
+        }if(s[j]==52&&x4==0&&s[j]<=k+48)
+        {
+            x4++;
+            continue;
+        }if(s[j]==53&&x5==0&&s[j]<=k+48)
+        {
+            x5++;
+            continue;
+        }if(s[j]==54&&x6==0&&s[j]<=k+48)
+        {
+            x6++;
+            continue;
+        }if(s[j]==55&&x7==0&&s[j]<=k+48)
+        {
+            x7++;
+            continue;
+        }if(s[j]==56&&x8==0&&s[j]<=k+48)
+        {
+            x8++;
+            continue;
+        }if(s[j]==57&&x9==0&&s[j]<=k+48)
+        {
+            x9++;
+            continue;
+        }
+
+}
+if(x+x1+x2+x3+x4+x5+x6+x7+x8+x9>=k+1)
+{
+    count++;
+}
+x=0;
+x1=0;x2=0;x3=0;x4=0;x5=0;x6=0;x7=0;x8=0;x9=0;
+}
+
+cout<<count;
+    return 0;
+}
