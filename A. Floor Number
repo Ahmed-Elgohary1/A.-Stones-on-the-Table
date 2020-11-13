@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+int t,n;
+double x,m;
+int arr[1001];
+cin>>t;
+for(int i=0;i<t;i++)
+{
+    cin>>n>>x;
+    if(n<3)
+    {
+        arr[i]=1;
+        continue;
+    }
+    n=n-2;
+    m=ceil(n/x);
+    arr[i]=m+1;
+}
+for(int j=0;j<t;j++)
+{
+    cout<<arr[j]<<endl;
+}
+
+
+    return 0;
+}
