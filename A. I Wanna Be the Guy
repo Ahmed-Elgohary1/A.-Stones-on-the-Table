@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+int arr[210];
+int n,p,q,i=0,r=0;
+cin >> n >> p;
+    for(int i =  0 ; i < p ; i++){
+        cin >> arr[i];
+    }
+    cin >> q;
+    for(int i = p ; i < p + q ; i++){
+        cin >> arr[i];
+    }
+ sort(arr,arr+(p+q));
+ for (int j=0;j<p+q;j++)
+ {
+     if(arr[j]!=arr[j+1])
+     {
+        r++;
+     }
+ }
+ if(n==r)
+ {
+     cout<<"I become the guy.";
+     return 0;
+ }
+ cout<< "Oh, my keyboard!";
+    return 0;
+}
