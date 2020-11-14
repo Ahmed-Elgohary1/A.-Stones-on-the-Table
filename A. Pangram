@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+string s;
+int j=0,n;
+cin>>n;
+cin>>s;
+transform(s.begin(), s.end(), s.begin(), ::tolower);
+sort(s.begin(), s.end());
+for(int t=0;t<n;t++)
+{
+    if(((int)s[t]<=122)&&t<n&&(s[t]!=s[t+1]))
+    {
+        j++;
+        if(j==26)
+        {
+            break;
+        }
+    }
+}
+if(j>=26)
+{
+    cout<<"YES";
+    return 0;
+}
+cout<<"NO";
+    return 0;
+}
