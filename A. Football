@@ -1,0 +1,34 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+string x,y;
+string array[103];
+int n,l=1,k=1,j;
+cin>>n;
+for(int i=0;i<n;i++)
+{
+    cin>>array[i];
+}
+sort(array,array+n);
+if(n==1)
+{
+    cout<<array[0];
+    return 0;
+}
+for(int i=0;i<n-1;i++)
+{
+    if(array[i]==array[i+1])
+    {
+        l++;
+    }
+    else{j=l;l=0;}
+}
+if(j>l)
+{
+    cout<<array[0];
+return 0;
+}
+cout<<array[n-1];
+    return 0;
+}
